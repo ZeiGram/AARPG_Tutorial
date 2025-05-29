@@ -16,7 +16,7 @@ func Exit() -> void:
 	
 ## WH during the _process update in this state
 func Process(_delta) -> State:
-	if player.velocity == Vector2.ZERO:
+	if player.direction == Vector2.ZERO:
 		return idle
 	
 	player.velocity = player.direction * move_speed
