@@ -136,8 +136,11 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+wall_min_slide_angle = 0.174533
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -3)
 shape = SubResource("CircleShape2D_edjgo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -158,3 +161,5 @@ script = ExtResource("3_i3pqv")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("4_hqtel")
+
+[node name="Camera2D" type="Camera2D" parent="."]

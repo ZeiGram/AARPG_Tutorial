@@ -16,8 +16,12 @@ func _ready():
 	
 	# Called every frame. 'delta' is time elapsed since last frame
 func _process(_delta):
-	direction.x = Input.get_axis("left","right")
-	direction.y = Input.get_axis("up", "down")
+	#direction.x = Input.get_axis("left","right")
+	#direction.y = Input.get_axis("up", "down")
+	direction = Vector2(
+		Input.get_axis("left","right"),
+		Input.get_axis("up", "down")
+	).normalized()
 	pass
 	
 
